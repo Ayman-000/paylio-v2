@@ -17,50 +17,11 @@
     <link rel="stylesheet" href="assets/css/plugin/animate.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/style-rtl.min.css" id="rtl-stylesheet" disabled>
-    <style>
-       .ticker-wrapper {
-    overflow: hidden;
-    white-space: nowrap;
-    background: #f8f9fa;
-    padding: 10px;
-    border-bottom: 2px solid #ccc;
-}
-
-.ticker-container {
-    display: flex;
-    animation: ticker-scroll 15s linear infinite;
-}
-
-@keyframes ticker-scroll {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-.ticker-item {
-    margin-right: 30px;
-    font-size: 16px;
-}
-
-    </style>
 </head>
 
 <body>
 
-  
-    <div class="ticker-wrapper" id="crypto-ticker">
-    <div class="ticker-container">
-        <div class="ticker-content" id="crypto-data">
-            <!-- Crypto Prices Will Be Added Here -->
-        </div>
-    </div>
-</div>
-
-    
-
+ 
     <!-- start preloader -->
     <div class="preloader" id="preloader"></div>
     <!-- end preloader -->
@@ -1058,39 +1019,6 @@
     <script src="assets/js/plugin/wow.min.js"></script>
     <script src="assets/js/plugin/plugin.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-        async function fetchCryptoPrices() {
-            const apiUrl = 'https://api.binance.com/api/v3/ticker/24hr';
-            const response = await fetch(apiUrl);
-            const data = await response.json();
-    
-            const tickerContainer = document.getElementById('crypto-ticker');
-            tickerContainer.innerHTML = ''; // Clear previous content
-    
-            // List of cryptocurrencies to display (symbols from Binance)
-            const cryptos = ['BTCUSDT', 'ETHUSDT', 'XRPUSDT', 'BNBUSDT', 'SOLUSDT', 'ADAUSDT', 'DOGEUSDT', 'TRXUSDT'];
-    
-            cryptos.forEach(symbol => {
-                const cryptoData = data.find(item => item.symbol === symbol);
-                if (cryptoData) {
-                    const price = parseFloat(cryptoData.lastPrice).toFixed(2);
-                    const change = parseFloat(cryptoData.priceChangePercent).toFixed(2);
-                    const color = change >= 0 ? 'green' : 'red';
-    
-                    const tickerItem = document.createElement('span');
-                    tickerItem.classList.add('ticker-item');
-                    tickerItem.innerHTML = `
-                        <strong>${symbol.replace('USDT', '')}</strong> $${price} 
-                        <span style="color:${color};">${change}%</span>
-                    `;
-                    tickerContainer.appendChild(tickerItem);
-                }
-            });
-        }
-    
-        fetchCryptoPrices();
-        setInterval(fetchCryptoPrices, 60000); // Refresh every 60 seconds
-    </script>
     
 </body>
 
