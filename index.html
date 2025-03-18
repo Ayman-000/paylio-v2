@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Paylio - Money Transfer and Online Payments HTML Template</title>
+    <title>Tranferto - Money Transfer and Online Payments HTML Template</title>
 
     <link rel="shortcut icon" href="assets/img/fav.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -17,6 +17,207 @@
     <link rel="stylesheet" href="assets/css/plugin/animate.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/style-rtl.min.css" id="rtl-stylesheet" disabled>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Root variables */
+:root {
+    --body-font: "Jost", sans-serif;
+    --body-color: #FFFFFF;
+    --primary-color: #4743c9;
+    --head-color: #0c266c;
+    --para-color: #0c266c;
+}
+
+/* Base styles */
+body {
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Container styles */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px;
+}
+
+/* Row and column styles */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-xl-3, .col-md-3, .col-sm-6 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 1200px) {
+    .col-xl-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@media (min-width: 576px) {
+    .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* Custom margin utility */
+.cus-mar {
+    margin-bottom: -20px;
+}
+
+/* Counter section styles */
+.counter-section {
+    position: relative;
+    padding: 70px 30px 65px;
+    margin-top: -110px;
+    transform: translateZ(10px);
+    margin-bottom: 20px;
+}
+
+.counter-section::before {
+    position: absolute;
+    content: "";
+    width: 70%;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 3.464px 24px 0px rgba(106, 105, 194, 0.25);
+    height: 100%;
+    top: 0;
+    left: 15%;
+    z-index: -1;
+}
+
+/* Single area styles */
+.single-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-area h2 {
+    color: var(--primary-color);
+    font-size: 57px;
+    line-height: 74.1px;
+    margin-top: -16px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.single-area h2 span {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+.single-area h2 span.counter {
+    margin-right: 5px;
+}
+
+/* Text area styles */
+.text-area {
+    text-align: center;
+}
+
+.text-area p {
+    margin: 0;
+    font-family: var(--body-font);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--para-color);
+    line-height: 30px;
+}
+
+/* Animation for fadeInUp */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.wow.fadeInUp {
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1199px) {
+    .counter-section .single-area {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 991px) {
+    .counter-section {
+        padding: 50px 30px 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .single-area h2 {
+        font-size: 40px;
+        line-height: 52px;
+    }
+    .text-area p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 575px) {
+    .counter-section {
+        padding: 40px 30px 5px;
+    }
+    .single-area h2 {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    .text-area p {
+        font-size: 15px;
+        line-height: 19px;
+    }
+}
+    </style>
+
+
+    </style>
 </head>
 
 <body>
@@ -46,48 +247,26 @@
                         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                             <ul class="navbar-nav">
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link active dropdown-toggle" href="javascript:void(0)" role="button"
-                                        data-bs-toggle="dropdown">
+                                    <a class="nav-link active " href="javascript:void(0)" role=""
+                                        data-bs-toggle="">
                                         Home
                                     </a>
-                                    <ul class="dropdown-menu show">
-                                        <li><a class="nav-item" href="index.html">Home 1</a></li>
-                                        <li><a class="nav-item" href="index-2.html">Home 2</a></li>
-                                        <li><a class="nav-item" href="index-3.html">Home 3</a></li>
-                                        <li><a class="nav-item" href="index-4.html">Home 4</a></li>
-                                        <li><a class="nav-item" href="index-5.html">Home 5</a></li>
-                                        <li><a class="nav-item" href="index-6.html">Home 6</a></li>
-                                        <li><a class="nav-item" href="index-7.html">Home 7</a></li>
-                                        <li><a class="nav-item" href="index-8.html">Home 8</a></li>
-                                        <li><a class="nav-item" href="index-9.html">Home 9</a></li>
-                                        <li><a class="nav-item" href="index-10.html">Home 10</a></li>
-                                        <li><a class="nav-item" href="index-11.html">Home 11</a></li>
-                                    </ul>
+                                  
+                              
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about-us.html">About Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="index-4.html">Send</a>
+                                    <a class="nav-link" href="our-team.html">Our Team</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="index-5.html">Receive</a>
+                                    <a class="nav-link" href="fees.html">Fees</a>
                                 </li>
+                                
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button"
+                                    <a class="nav-link " href="javascript:void(0)" role="button"
                                         data-bs-toggle="dropdown">
-                                        Blog
-                                    </a>
-                                    <ul class="dropdown-menu show">
-                                        <li><a class="nav-item" href="blog.html">Blog 1</a></li>
-                                        <li><a class="nav-item" href="blog-2.html">Blog 2</a></li>
-                                        <li><a class="nav-item" href="blog-3.html">Blog 3</a></li>
-                                        <li><a class="nav-item" href="blog-4.html">Blog 4</a></li>
-                                        <li><a class="nav-item" href="blog-single.html">Blog Single 1</a></li>
-                                        <li><a class="nav-item" href="blog-single-2.html">Blog Single 2</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button"
-                                        data-bs-toggle="dropdown">
-                                        Pages
+                                        
                                     </a>
                                     <div class="dropdown-menu show mega-menu">
                                         <ul class="dropdown">
@@ -117,9 +296,9 @@
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)" role="button"
+                                    <a class="nav-link" href="javascript:void(0)" role="button"
                                         data-bs-toggle="dropdown">
-                                        Help
+                                        
                                     </a>
                                     <ul class="dropdown-menu show">
                                         <li><a class="nav-item" href="help-center.html">Help Center 1</a></li>
@@ -139,7 +318,7 @@
                                     </select>
                                 </div>
                                 <a href="login.html" class="cmn-btn login">Login</a>
-                                <a href="register.html" class="cmn-btn">Sign up</a>
+                                <a href="login-2.html" class="cmn-btn">Sign up</a>
                             </div>
                         </div>
                     </nav>
@@ -149,6 +328,8 @@
     </header>
     <!-- header-section end -->
 
+
+    
     <!-- banner-section start -->
     <section class="banner-section">
         <div class="banner-content d-flex align-items-center">
@@ -163,12 +344,12 @@
                     <div class="col-lg-7 col-md-10">
                         <div class="main-content">
                             <div class="top-area justify-content-center">
-                                <h1>Instantly pay the world</h1>
-                                <p class="xxlr">A simple and highly secure money transfer around the world</p>
+                                <h1 style="color: #FEA800;">Instantly pay the world</h1>
+                                <p class="xxlr" style="color: #00fedf;">A simple and highly secure money & Cryptocurrencies transfer around the world</p>
                                 <form action="#">
                                     <div class="input-field d-flex">
-                                        <input type="email" placeholder="Where are you sending money to">
-                                        <button class="cmn-btn"><span>Check rate</span></button>
+                                        <input type="email" placeholder="Enter your 6-code transfer number"                                        ">
+                                        <button class="cmn-btn"><span>TRACK TRANSFER </span></button>
                                     </div>
                                 </form>
                                 <div class="bottom-banner d-flex align-items-center">
@@ -179,14 +360,14 @@
                                         </a>
                                     </div>
                                     <div class="right d-grid">
-                                        <h5>245M+</h5>
+                                        <h5>30M+</h5>
                                         <div class="review d-flex align-items-center">
-                                            <h6>4.0</h6>
+                                            <h6>5.0</h6>
                                             <a href="javascript:void(0)"><i class="fas fa-star"></i></a>
                                             <a href="javascript:void(0)"><i class="fas fa-star"></i></a>
                                             <a href="javascript:void(0)"><i class="fas fa-star"></i></a>
                                             <a href="javascript:void(0)"><i class="fas fa-star"></i></a>
-                                            <a href="javascript:void(0)"><i class="fas fa-star blank"></i></a>
+                                            <a href="javascript:void(0)"><i class="fas fa-star"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -199,9 +380,50 @@
                 </div>
             </div>
         </div>
+        
     </section>
     <!-- banner-section end -->
 
+    <!-- counter-section start -->
+    <section class="counter-section">
+        <div class="container wow fadeInUp">
+            <div class="row cus-mar">
+                <div class="col-xl-3 col-md-3 col-sm-6">
+                    <div class="single-area d-flex align-items-center justify-content-center">
+                        <div class="text-area text-center">
+                            <h2><span class="counter" data-count="50">0</span><span>+</span></h2>
+                            <p>Supported Currencies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3 col-sm-6">
+                    <div class="single-area d-flex align-items-center justify-content-center">
+                        <div class="text-area text-center">
+                            <h2><span class="counter" data-count="100">0</span><span>+</span></h2>
+                            <p>Available Countries</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3 col-sm-6">
+                    <div class="single-area d-flex align-items-center justify-content-center">
+                        <div class="text-area text-center">
+                            <h2><span class="counter" data-count="70">0</span><span>+</span></h2>
+                            <p>Payment Methods</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3 col-sm-6">
+                    <div class="single-area d-flex align-items-center justify-content-center">
+                        <div class="text-area text-center">
+                            <h2><span class="counter" data-count="7">0</span><span>/</span><span class="counter" data-count="24">0</span><span>+</span></h2>
+                            <p>Support Team</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Features In start -->
     <section class="features-section">
         <div class="overlay pt-120 pb-120">
@@ -210,8 +432,7 @@
                     <div class="col-lg-8">
                         <div class="section-header">
                             <h2 class="title">Why we’re trusted by millions worldwide</h2>
-                            <p>Paylio is a fast and secure service that lets you transfer money
-                                online using a computer, smartphone, or our app.</p>
+                            <p>Tranferto is a fast and secure service that lets you transfer Money & Cryptocurrencies online using a computer, smartphone..</p>
                         </div>
                     </div>
                 </div>
@@ -222,7 +443,7 @@
                                 <img src="assets/img/features-icon-1.png" alt="icon">
                             </div>
                             <h5>Affordable</h5>
-                            <p>Low fees on international money transfers – always</p>
+                            <p>Low fees on international Money & Cryptocurrencies transfers – always</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -231,7 +452,7 @@
                                 <img src="assets/img/features-icon-2.png" alt="icon">
                             </div>
                             <h5>Simple</h5>
-                            <p>Send money on mobile app or online anytime from anywhere</p>
+                            <p>Send Money & Cryptocurrencies on smartphone or online anytime from anywhere</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -240,7 +461,7 @@
                                 <img src="assets/img/features-icon-3.png" alt="icon">
                             </div>
                             <h5>Quick</h5>
-                            <p>Send money to your loved ones in minutes</p>
+                            <p>Send Money & Cryptocurrencies to your loved ones in minutes</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -267,7 +488,7 @@
                         <div class="customers-area">
                             <div class="element po-1">
                                 <div class="image-area">
-                                    <p class="item-1">Awesome!</p>
+                                    <p class="item-1"> Great Service ! </p>
                                     <img class="item-1" src="assets/img/customers-1.png" alt="image">
                                 </div>
                             </div>
@@ -279,31 +500,31 @@
                             </div>
                             <div class="element po-3">
                                 <div class="image-area">
-                                    <p class="item-3">Awesome!</p>
+                                    <p class="item-3">Tranferto c'est TOP</p>
                                     <img class="item-3" src="assets/img/customers-3.png" alt="image">
                                 </div>
                             </div>
                             <div class="element po-4">
                                 <div class="image-area">
-                                    <p class="item-4">Awesome!</p>
+                                    <p class="item-4">Rápido y seguro, eso es lo que estoy buscando.</p>
                                     <img class="item-4" src="assets/img/customers-4.png" alt="image">
                                 </div>
                             </div>
                             <div class="element po-5">
                                 <div class="image-area">
-                                    <p class="item-5">Awesome!</p>
+                                    <p class="item-5">我喜欢它</p>
                                     <img class="item-5" src="assets/img/customers-5.png" alt="image">
                                 </div>
                             </div>
                             <div class="element po-6">
                                 <div class="image-area">
-                                    <p class="item-6">Awesome!</p>
+                                    <p class="item-6">beste Dienstleistungen</p>
                                     <img class="item-6" src="assets/img/customers-6.png" alt="image">
                                 </div>
                             </div>
                             <div class="element po-7">
                                 <div class="image-area">
-                                    <p class="item-7">Awesome!</p>
+                                    <p class="item-7">お勧めします</p>
                                     <img class="item-7" src="assets/img/customers-7.png" alt="image">
                                 </div>
                             </div>
@@ -319,7 +540,7 @@
                     <div class="row justify-content-center text-center">
                         <div class="col-lg-7 col-sm-8">
                             <div class="section-header">
-                                <h2 class="title">Over <span>245m+</span> User Trust Paylio</h2>
+                                <h2 class="title">Over <span>30m+</span> User Trust <span> Tranferto</span> </h2>
                             </div>
                         </div>
                     </div>
@@ -343,8 +564,9 @@
                                                             <a href="javascript:void(0)"><i class="fas fa-star"></i></a>
                                                             <a href="javascript:void(0)"><i class="fas fa-star"></i></a>
                                                         </div>
-                                                        <p>The greatest and number 1 services for transfer money online. I can
-                                                            send money easily and trusted services.</p>
+                                                        <p> Exceptional service! The crypto payment gateway on this platform is top-notch. 
+                                                            It’s fast, secure, and incredibly professional. I've never had any issues with transactions.
+                                                             Highly recommended for anyone needing a reliable crypto payment solution </p>
                                                         <a href="javascript:void(0)">Ella Stewart</a>
                                                         <div class="country">
                                                             <img src="assets/img/flag.png" alt="image">
@@ -358,7 +580,7 @@
                                     <div class="main">
                                         <div class="wrapper">
                                             <div class="profile">
-                                                <img src="assets/img/testimonials-1.png" alt="image">
+                                                <img src="assets/img/customers-6.png" alt="image">
                                             </div>
                                             <div class="row d-flex justify-content-center">
                                                 <div class="col-lg-6 col-md-8 col-sm-12">
@@ -371,8 +593,7 @@
                                                             <a href="javascript:void(0)"><i class="fas fa-star"></i></a>
                                                             <a href="javascript:void(0)"><i class="fas fa-star"></i></a>
                                                         </div>
-                                                        <p>The greatest and number 1 services for transfer money online. I can
-                                                            send money easily and trusted services.</p>
+                                                        <p>  Absolutely impressed with the level of security and efficiency of the crypto payment gateway offered by Tranferto, Transactions are processed promptly, and the professionalism of their service is unmatched in the market. Highly satisfied with the overall experience  </p>
                                                         <a href="javascript:void(0)">Rose W. Norwood</a>
                                                         <div class="country">
                                                             <img src="assets/img/flag.png" alt="image">
@@ -401,8 +622,8 @@
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-9">
                             <div class="section-header text-center">
-                                <h2 class="title">Secure money transfers you can trust</h2>
-                                <p>Send and receive money in minutes from people you know and trust</p>
+                                <h2 class="title">Secure Money/Cryptocurrencies transfers you can trust     </h2>
+                                <p>Send and receive money & cryptocurrencies in minutes from people you know and trust</p>
                             </div>
                         </div>
                     </div>
@@ -411,19 +632,19 @@
                             <div class="col-lg-3 col-md-6">
                                 <div class="single-item text-center">
                                     <div class="icon">
-                                        <img src="assets/img/choose-us-icon-1.png" alt="icon">
+                                        <img src="assets/img/choose-us-icon-7.png" alt="icon">
                                     </div>
-                                    <h5>Global Network</h5>
-                                    <p>We send money to 90 countries and open to new countries regularly</p>
+                                    <h5>Track My Transfer</h5>
+                                    <p>With Tranferto you can know all the important information about your transfer.</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
                                 <div class="single-item text-center">
                                     <div class="icon">
-                                        <img src="assets/img/choose-us-icon-2.png" alt="icon">
+                                        <img src="assets/img/choose-us-icon-1.png" alt="icon"> 
                                     </div>
-                                    <h5>Fixed costs</h5>
-                                    <p>We display the exchange rate, transfer fees and the amount they will receive</p>
+                                    <h5>Global Network</h5>
+                                    <p>We send money to 100+ countries and open to new countries regularly </p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
@@ -432,7 +653,7 @@
                                         <img src="assets/img/choose-us-icon-3.png" alt="icon">
                                     </div>
                                     <h5>Multi trans.option</h5>
-                                    <p>Send your money however you want - via cards and bank accounts or other option</p>
+                                    <p>Send your money/cryptocurencies however you want - via cards and bank accounts and online wallets or other option</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
@@ -459,17 +680,17 @@
                                         <img src="assets/img/choose-us-icon-6.png" alt="icon">
                                     </div>
                                     <h5>Rate Alerts</h5>
-                                    <p>Need to know when a currency hits a specific rate? The Paylio Rate Alerts will let
+                                    <p>Need to know when a currency hits a specific rate? The Tranferto Rate Alerts will let
                                         you know</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
                                 <div class="single-item text-center">
                                     <div class="icon">
-                                        <img src="assets/img/choose-us-icon-7.png" alt="icon">
+                                        <img src="assets/img/choose-us-icon-2.png" alt="icon">
                                     </div>
-                                    <h5>Track My Transfer</h5>
-                                    <p>With paylio you can know all the important information about your transfer.</p>
+                                    <h5>Fixed costs</h5>
+                                    <p>We display the exchange rate, transfer fees and the amount they will receive</p>
                                 </div>
                             </div>
                             <div class="col-lg-3 col-md-6">
@@ -501,9 +722,9 @@
                     </div>
                     <div class="col-lg-6 d-flex align-items-center">
                         <div class="section">
-                            <h5>transfers for you and your friends!</h5>
-                            <h2 class="title">Earn zero-fee*</h2>
-                            <a href="index-8.html" class="cmn-btn">Invite Friends</a>
+                            <h5>Safe and affordable online transfer service</h5>
+                            <h2 class="title">A better way to send and track your money & cryptocurrencies </h2>
+                            
                         </div>
                     </div>
                 </div>
@@ -521,9 +742,7 @@
                         <div class="col-lg-8">
                             <div class="section-header">
                                 <h2 class="title">All Your Payments In One Place</h2>
-                                <p>We make international money transfer fast, simple and secure. Whichever method you
-                                    choose,
-                                    it only takes a few steps to send money online with us</p>
+                                <p>We make international money & cryptocurrencies transfer fast, simple and secure. Whichever method you choose, it only takes a few steps to send money online with us</p>
                             </div>
                         </div>
                     </div>
@@ -571,7 +790,7 @@
                                 <img src="assets/img/payment-icon-5.png" alt="icon">
                             </div>
                             <h5>Online Shopping</h5>
-                            <p>Pay for shopping at online stores from your paylio wallet smoothly.</p>
+                            <p>Pay for shopping at online stores from your Tranferto wallet smoothly.</p>
                         </div>
                     </div>
                     <div class="single text-center">
@@ -642,7 +861,7 @@
                             </div>
                             <div class="right">
                                 <h5>We deliver to your recipient</h5>
-                                <p>Pay us by Credit/Debit card or Bank Transfer, and we do the rest. That's it!</p>
+                                <p>Pay us by Credit/Debit card or Bank Transfer or Cryptocurrencies , and we do the rest. That's it!</p>
                             </div>
                         </div>
                     </div>
@@ -653,241 +872,11 @@
     <!-- How it works In end -->
 
     <!-- App Download In start -->
-    <section class="app-download">
-        <div class="overlay pt-120">
-            <div class="container wow fadeInUp">
-                <div class="row">
-                    <div class="col-lg-6 col-md-4">
-                        <div class="left-area">
-                            <img src="assets/img/app-download-left.png" alt="image">
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-8 d-flex align-items-center">
-                        <div class="right-area">
-                            <div class="section-header">
-                                <h2 class="title">MOBILE APP FOR EASY ACCESS TO YOUR MONEY</h2>
-                                <p>Access your account via your mobile phone. View balance, transfer
-                                funds, view transactions wherever you are.</p>
-                            </div>
-                            <ul class="feature">
-                                <li>
-                                    <div class="icon"><img src="assets/img/check.png" alt="icon"></div>
-                                    Login with fingerprint or Face ID.
-                                </li>
-                                <li>
-                                    <div class="icon"><img src="assets/img/check.png" alt="icon"></div>
-                                    Simple few Taps to send money
-                                </li>
-                                <li>
-                                    <div class="icon"><img src="assets/img/check.png" alt="icon"></div>
-                                    View transaction history.
-                                </li>
-                                <li>
-                                    <div class="icon"><img src="assets/img/check.png" alt="icon"></div>
-                                    Get instant App notifications.
-                                </li>
-                            </ul>
-                            <div class="phone-number">
-                                <form action="#" class="d-flex align-items-center justify-content-between">
-                                    <div class="top-area d-flex align-items-end">
-                                        <select>
-                                            <option value="1">+44</option>
-                                            <option value="2">+1</option>
-                                            <option value="3">+65</option>
-                                            <option value="4">+354</option>
-                                            <option value="5">+974</option>
-                                        </select>
-                                        <input placeholder="Phone Number" type="tel">
-                                    </div>
-                                    <div class="btn-area">
-                                        <a href="register-2.html" class="cmn-btn">Get Started</a>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="app-market">
-                                <a href="javascript:void(0)"><img src="assets/img/gPlay_btn.png" alt="App Store"></a>
-                                <a href="javascript:void(0)"><img src="assets/img/apple_btn.png" alt="App Store"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+ 
     <!-- App Download In end -->
 
     <!-- FAQs In start -->
-    <section class="faqs-section">
-        <div class="overlay pt-120 pb-120">
-            <div class="container wow fadeInUp">
-                <div class="row d-flex justify-content-between">
-                    <div class="col-lg-6 col-md-10">
-                        <div class="section-header">
-                            <div class="left">
-                                <h2 class="title">Frequently asked questions</h2>
-                                <p>We have a list of frequently asked questions about us</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-2 d-flex align-items-end justify-content-md-end justify-content-start">
-                        <div class="right">
-                            <a href="register.html" class="cmn-btn">Get Started</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row wrapper">
-                    <div class="col-lg-6">
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
-                            <div class="accordion-item">
-                                <h6 class="accordion-header" id="flush-headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                        aria-controls="flush-collapseOne">
-                                        How to send money online?
-                                    </button>
-                                </h6>
-                                <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body"><p>Lorem ipsum dolor sit amet consectetur adipiscing elit posuere vel venenatis, eu sit massa. 
-                                        Volutpat massa rhoncus odio feugiat tellus elit massa sed ullamcorper a in.</p></div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h6 class="accordion-header" id="flush-headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                        aria-controls="flush-collapseTwo">
-                                        How much are money transfer fees?
-                                    </button>
-                                </h6>
-                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body"><p>Lorem ipsum dolor sit amet consectetur adipiscing elit posuere vel venenatis, eu sit massa. 
-                                        Volutpat massa rhoncus odio feugiat tellus elit massa sed ullamcorper a in.</p></div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h6 class="accordion-header" id="flush-headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                        aria-controls="flush-collapseThree">
-                                        What is the fastest way to send money abroad?
-                                    </button>
-                                </h6>
-                                <div id="flush-collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body"><p>Lorem ipsum dolor sit amet consectetur adipiscing elit posuere vel venenatis, eu sit massa. 
-                                        Volutpat massa rhoncus odio feugiat tellus elit massa sed ullamcorper a in.</p></div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h6 class="accordion-header" id="flush-headingFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseFour" aria-expanded="false"
-                                        aria-controls="flush-collapseFour">
-                                        How to use Paylio?
-                                    </button>
-                                </h6>
-                                <div id="flush-collapseFour" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body"><p>Lorem ipsum dolor sit amet consectetur adipiscing elit posuere vel venenatis, eu sit massa. 
-                                        Volutpat massa rhoncus odio feugiat tellus elit massa sed ullamcorper a in.</p></div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h6 class="accordion-header" id="flush-headingFive">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#flush-collapseFive" aria-expanded="false"
-                                        aria-controls="flush-collapseFive">
-                                        How does Paylio protect your money?
-                                    </button>
-                                </h6>
-                                <div id="flush-collapseFive" class="accordion-collapse collapse"
-                                    aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-                                    <div class="accordion-body"><p>Lorem ipsum dolor sit amet consectetur adipiscing elit posuere vel venenatis, eu sit massa. 
-                                        Volutpat massa rhoncus odio feugiat tellus elit massa sed ullamcorper a in.</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="accordion accordion-flush" id="accordionSecond">
-                            <div class="accordion-item">
-                                <h6 class="accordion-header" id="second-headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#second-collapseOne" aria-expanded="false"
-                                        aria-controls="second-collapseOne">
-                                        Are money transfer apps safe?
-                                    </button>
-                                </h6>
-                                <div id="second-collapseOne" class="accordion-collapse collapse"
-                                    aria-labelledby="second-headingOne" data-bs-parent="#accordionSecond">
-                                    <div class="accordion-body"><p>Lorem ipsum dolor sit amet consectetur adipiscing elit posuere vel venenatis, eu sit massa. 
-                                        Volutpat massa rhoncus odio feugiat tellus elit massa sed ullamcorper a in.</p></div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h6 class="accordion-header" id="second-headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#second-collapseTwo" aria-expanded="false"
-                                        aria-controls="second-collapseTwo">
-                                        How much money can I send?
-                                    </button>
-                                </h6>
-                                <div id="second-collapseTwo" class="accordion-collapse collapse"
-                                    aria-labelledby="second-headingTwo" data-bs-parent="#accordionSecond">
-                                    <div class="accordion-body"><p>Lorem ipsum dolor sit amet consectetur adipiscing elit posuere vel venenatis, eu sit massa. 
-                                        Volutpat massa rhoncus odio feugiat tellus elit massa sed ullamcorper a in.</p></div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h6 class="accordion-header" id="second-headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#second-collapseThree" aria-expanded="false"
-                                        aria-controls="second-collapseThree">
-                                        Which currency can I send?
-                                    </button>
-                                </h6>
-                                <div id="second-collapseThree" class="accordion-collapse collapse"
-                                    aria-labelledby="second-headingThree" data-bs-parent="#accordionSecond">
-                                    <div class="accordion-body"><p>Lorem ipsum dolor sit amet consectetur adipiscing elit posuere vel venenatis, eu sit massa. 
-                                        Volutpat massa rhoncus odio feugiat tellus elit massa sed ullamcorper a in.</p></div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h6 class="accordion-header" id="second-headingFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#second-collapseFour" aria-expanded="false"
-                                        aria-controls="second-collapseFour">
-                                        Cancel transaction
-                                    </button>
-                                </h6>
-                                <div id="second-collapseFour" class="accordion-collapse collapse"
-                                    aria-labelledby="second-headingFour" data-bs-parent="#accordionSecond">
-                                    <div class="accordion-body"><p>Lorem ipsum dolor sit amet consectetur adipiscing elit posuere vel venenatis, eu sit massa. 
-                                        Volutpat massa rhoncus odio feugiat tellus elit massa sed ullamcorper a in.</p></div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h6 class="accordion-header" id="second-headingFive">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#second-collapseFive" aria-expanded="false"
-                                        aria-controls="second-collapseFive">
-                                        Can I send multiple payments?
-                                    </button>
-                                </h6>
-                                <div id="second-collapseFive" class="accordion-collapse collapse"
-                                    aria-labelledby="second-headingFive" data-bs-parent="#accordionSecond">
-                                    <div class="accordion-body"><p>Lorem ipsum dolor sit amet consectetur adipiscing elit posuere vel venenatis, eu sit massa. 
-                                        Volutpat massa rhoncus odio feugiat tellus elit massa sed ullamcorper a in.</p></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  
     <!-- FAQs In end -->
 
     <!-- Call to action In start -->
@@ -901,7 +890,7 @@
                                 <div class="row d-flex justify-content-center">
                                     <div class="col-lg-8">
                                         <div class="section-header text-center">
-                                            <h2 class="title">Start sending money with Paylio today</h2>
+                                            <h2 class="title">Start sending money with Tranferto today</h2>
                                             <p>Send money over the world with the best and transparent 
                                                 exchange rates without fees!.</p>
                                             <a href="register.html" class="cmn-btn">Get your free account</a>
@@ -961,7 +950,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single-area">
                             <h5>Subscribe to our news</h5>
-                            <p>Get the latest happenings and tips from Paylio</p>
+                            <p>Get the latest happenings and tips from Tranferto</p>
                             <form action="#">
                                 <div class="subscribe d-flex">
                                     <input type="email" placeholder="Your Email Address">
@@ -987,7 +976,7 @@
                     <div class="row d-flex align-items-center">
                         <div class="col-lg-6 col-md-8 cus-order d-flex justify-content-md-start justify-content-center">
                             <div class="left-area">
-                                <p class="mdr">PAYLIO © <span class="currentYear">2024</span>. ALL RIGHTS RESERVED. <span>|</span> Designed by
+                                <p class="mdr">Tranferto © <span class="currentYear">2024</span>. ALL RIGHTS RESERVED. <span>|</span> Designed by
                                     <a href="https://themeforest.net/user/pixelaxis">Pixelasis</a>
                                 </p>
                             </div>
@@ -1019,6 +1008,27 @@
     <script src="assets/js/plugin/wow.min.js"></script>
     <script src="assets/js/plugin/plugin.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Initialize WOW.js
+    new WOW().init();
+
+    // Counter animation
+    $('.counter').each(function () {
+        $(this).prop('Counter', 0).animate({
+            Counter: $(this).data('count')
+        }, {
+            duration: 2000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+});
+</script>
     
 </body>
 
