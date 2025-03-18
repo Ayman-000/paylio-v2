@@ -19,201 +19,189 @@
     <link rel="stylesheet" href="assets/css/style-rtl.min.css" id="rtl-stylesheet" disabled>
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        /* Root variables */
-:root {
-    --body-font: "Jost", sans-serif;
-    --body-color: #FFFFFF;
-    --primary-color: #4743c9;
-    --head-color: #0c266c;
-    --para-color: #0c266c;
-}
+        /* Root variables from Paylio template */
+        :root {
+            --body-font: "Jost", sans-serif;
+            --body-color: #FFFFFF;
+            --primary-color: #4743c9;
+            --head-color: #0c266c;
+            --para-color: #0c266c;
+        }
 
-/* Base styles */
-body {
-    font-family: var(--body-font);
-    background-color: var(--body-color);
-    font-size: 18px;
-    line-height: 30px;
-    padding: 0;
-    margin: 0;
-    font-weight: 400;
-}
+        /* Base styles */
+        body {
+            font-family: var(--body-font);
+            background-color: var(--body-color);
+            font-size: 18px;
+            line-height: 30px;
+            padding: 0;
+            margin: 0;
+            font-weight: 400;
+        }
 
-/* Container styles */
-.container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 1140px;
-}
+        /* Container styles */
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 1140px;
+        }
 
-/* Row and column styles */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
+        /* Row and column styles */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
 
-.col-xl-3, .col-md-3, .col-sm-6 {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
+        .col-xl-3, .col-md-3, .col-sm-6 {
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
 
-@media (min-width: 1200px) {
-    .col-xl-3 {
-        flex: 0 0 25%;
-        max-width: 25%;
-    }
-}
+        /* Custom margin utility */
+        .cus-mar {
+            margin-bottom: -20px;
+        }
 
-@media (min-width: 768px) {
-    .col-md-3 {
-        flex: 0 0 25%;
-        max-width: 25%;
-    }
-}
+        /* Counter section styles */
+        .counter-section {
+            position: relative;
+            padding: 70px 30px 65px;
+            margin-top: -110px;
+            transform: translateZ(10px);
+            margin-bottom: 20px;
+        }
 
-@media (min-width: 576px) {
-    .col-sm-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-}
+        .counter-section::before {
+            position: absolute;
+            content: "";
+            width: 70%;
+            border-radius: 20px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 2px 3.464px 24px 0px rgba(106, 105, 194, 0.25);
+            height: 100%;
+            top: 0;
+            left: 15%;
+            z-index: -1;
+        }
 
-/* Custom margin utility */
-.cus-mar {
-    margin-bottom: -20px;
-}
+        /* Single area styles */
+        .single-area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; /* Stack number and text vertically */
+            text-align: center;
+            padding: 20px 0; /* Add padding for spacing */
+        }
 
-/* Counter section styles */
-.counter-section {
-    position: relative;
-    padding: 70px 30px 65px;
-    margin-top: -110px;
-    transform: translateZ(10px);
-    margin-bottom: 20px;
-}
+        .single-area h2 {
+            color: var(--primary-color);
+            font-size: 57px;
+            line-height: 74.1px;
+            margin-top: -16px;
+            font-weight: 600;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center; /* Align number and + vertically */
+        }
 
-.counter-section::before {
-    position: absolute;
-    content: "";
-    width: 70%;
-    border-radius: 20px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 2px 3.464px 24px 0px rgba(106, 105, 194, 0.25);
-    height: 100%;
-    top: 0;
-    left: 15%;
-    z-index: -1;
-}
+        .single-area h2 span.counter {
+            font-size: inherit;
+            font-weight: inherit;
+            color: inherit;
+            margin-right: 5px; /* Space between number and + */
+        }
 
-/* Single area styles */
-.single-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        .single-area h2 span.plus {
+            font-size: inherit;
+            font-weight: inherit;
+            color: inherit;
+        }
 
-.single-area h2 {
-    color: var(--primary-color);
-    font-size: 57px;
-    line-height: 74.1px;
-    margin-top: -16px;
-    font-weight: 600;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-}
+        /* Text area styles */
+        .text-area {
+            text-align: center;
+        }
 
-.single-area h2 span {
-    font-size: inherit;
-    font-weight: inherit;
-    color: inherit;
-}
+        .text-area p {
+            margin: 0;
+            font-family: var(--body-font);
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--para-color);
+            line-height: 30px;
+            margin-top: 10px; /* Space between number and text */
+        }
 
-.single-area h2 span.counter {
-    margin-right: 5px;
-}
+        /* Animation for fadeInUp */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translate3d(0, 100%, 0);
+            }
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
 
-/* Text area styles */
-.text-area {
-    text-align: center;
-}
+        .fadeInUp {
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
 
-.text-area p {
-    margin: 0;
-    font-family: var(--body-font);
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--para-color);
-    line-height: 30px;
-}
+        /* Responsive adjustments */
+        @media (max-width: 1199px) {
+            .counter-section .single-area {
+                margin-bottom: 30px;
+            }
+        }
 
-/* Animation for fadeInUp */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translate3d(0, 100%, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
+        @media (max-width: 991px) {
+            .counter-section {
+                padding: 50px 30px 10px;
+            }
+            .col-md-3 {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+        }
 
-.wow.fadeInUp {
-    animation-name: fadeInUp;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-}
+        @media (max-width: 767px) {
+            .col-sm-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+            .single-area h2 {
+                font-size: 40px; /* Slightly smaller for mobile */
+                line-height: 52px;
+            }
+            .text-area p {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
 
-/* Responsive adjustments */
-@media (max-width: 1199px) {
-    .counter-section .single-area {
-        margin-bottom: 30px;
-    }
-}
-
-@media (max-width: 991px) {
-    .counter-section {
-        padding: 50px 30px 10px;
-    }
-}
-
-@media (max-width: 767px) {
-    .col-sm-6 {
-        flex: 0 0 50%;
-        max-width: 50%;
-    }
-    .single-area h2 {
-        font-size: 40px;
-        line-height: 52px;
-    }
-    .text-area p {
-        font-size: 16px;
-        line-height: 24px;
-    }
-}
-
-@media (max-width: 575px) {
-    .counter-section {
-        padding: 40px 30px 5px;
-    }
-    .single-area h2 {
-        font-size: 30px;
-        line-height: 36px;
-    }
-    .text-area p {
-        font-size: 15px;
-        line-height: 19px;
-    }
-}
+        @media (max-width: 575px) {
+            .counter-section {
+                padding: 40px 30px 5px;
+            }
+            .single-area h2 {
+                font-size: 30px;
+                line-height: 36px;
+            }
+            .text-area p {
+                font-size: 15px;
+                line-height: 19px;
+            }
+        }
     </style>
 
 
@@ -384,45 +372,8 @@ body {
     </section>
     <!-- banner-section end -->
 
-    <!-- counter-section start -->
-    <section class="counter-section">
-        <div class="container wow fadeInUp">
-            <div class="row cus-mar">
-                <div class="col-xl-3 col-md-3 col-sm-6">
-                    <div class="single-area d-flex align-items-center justify-content-center">
-                        <div class="text-area text-center">
-                            <h2><span class="counter" data-count="50">0</span><span>+</span></h2>
-                            <p>Supported Currencies</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-3 col-sm-6">
-                    <div class="single-area d-flex align-items-center justify-content-center">
-                        <div class="text-area text-center">
-                            <h2><span class="counter" data-count="100">0</span><span>+</span></h2>
-                            <p>Available Countries</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-3 col-sm-6">
-                    <div class="single-area d-flex align-items-center justify-content-center">
-                        <div class="text-area text-center">
-                            <h2><span class="counter" data-count="70">0</span><span>+</span></h2>
-                            <p>Payment Methods</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-3 col-sm-6">
-                    <div class="single-area d-flex align-items-center justify-content-center">
-                        <div class="text-area text-center">
-                            <h2><span class="counter" data-count="7">0</span><span>/</span><span class="counter" data-count="24">0</span><span>+</span></h2>
-                            <p>Support Team</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- counter-section end -->
+   
     
     <!-- Features In start -->
     <section class="features-section">
@@ -1008,27 +959,6 @@ body {
     <script src="assets/js/plugin/wow.min.js"></script>
     <script src="assets/js/plugin/plugin.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    // Initialize WOW.js
-    new WOW().init();
-
-    // Counter animation
-    $('.counter').each(function () {
-        $(this).prop('Counter', 0).animate({
-            Counter: $(this).data('count')
-        }, {
-            duration: 2000,
-            easing: 'swing',
-            step: function (now) {
-                $(this).text(Math.ceil(now));
-            }
-        });
-    });
-});
-</script>
     
 </body>
 
